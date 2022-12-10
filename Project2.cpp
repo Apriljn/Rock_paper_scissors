@@ -4,29 +4,24 @@
 #include <stdlib.h>
 using namespace std;
 
-class Game {
-public:
-
-};
-
 int main() {
 
-	std::cout << "====================\n";
-	std::cout << "rock paper scissors!\n";
-	std::cout << "====================\n";
+	cout << "====================\n";
+	cout << "rock paper scissors!\n";
+	cout << "====================\n";
 
 	char ans = 'N';
 	do {
 		srand(time(NULL));
 		int computer = rand() % 3 + 1;
 		int user = 0;
-		std::cout << "1) Rock\n";
-		std::cout << "2) Paper\n";
-		std::cout << "3) Scissors\n";
+		cout << "1) Rock\n";
+		cout << "2) Paper\n";
+		cout << "3) Scissors\n";
 
-		std::cout << "shoot! ";
+		cout << "shoot! ";
 
-		std::cin >> user;
+		cin >> user;
 
 		if (user == 1 && computer == 1) {
 			cout << "Draw :)\n";
@@ -65,12 +60,12 @@ int main() {
 			cout << "Let's do it again :)\n";
 		}
 
-		std::cout << "====================\n";
+		cout << "====================\n";
 		cout << "Do you want to continue (Y/N)?\n";
 		cout << "You must type a 'Y' or an 'N' :";
 		cin >> ans;
 
-		std::cout << "====================\n";
+		cout << "====================\n";
 
 	} while ((ans == 'Y') || (ans == 'y'));
 }
